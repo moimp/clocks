@@ -1,0 +1,4 @@
+rootProject.name = 'clocks'
+
+include('clocks')
+include('clocks-frozen')
