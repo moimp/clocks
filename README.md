@@ -44,13 +44,3 @@
 
 ```
 
-<br/>
-<br/>
-
-**Add To Dependencies**
->implementation 'com.trevari.commons:clock:1.0.0'   
-testImplementation 'com.trevari.commons:clock-frozen:1.0.0'
-
-<br/>
-<br/>
-
