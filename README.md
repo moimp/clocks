@@ -29,31 +29,39 @@
 <br/>
 
 **How To Use [clock] In Code**
+```java
+    @Test
+    @DisplayName("When clock is frozen, Clock use FrozenClock")
+    void use_frozenClock(){
+            LocalDateTime freeze=LocalDateTime.of(2021,1,1,1,1);
+
+            Clocks.freeze(freeze);
+
+            assertThat(Clocks.getInstance()).isInstanceOf(Clocks.FrozenClock.class);
+        }
+
+    @Test
+    void freeze(){
+
+        LocalDateTime freeze=LocalDateTime.of(2021,1,1,1,1);
+
+        Clocks.freeze(freeze);
+
+        assertThat(Clocks.getInstance().getNow()).isEqualTo(freeze);
+        }
 ```
-[EX]
-        public MemberInfoChangeCommand create(ClubInfoChangedEvent event) {
 
-            MemberInfoChangeCommand command = new MemberInfoChangeCommand();
-            command.setMembershipId(event.getMembershipId));
-            command.setClub(event.getClub);
-            command.setMeetings(event.getMeetings);
-            command.setEventedAt(Clocks.now()); 📍 Clocks의 LocalDateTime.now()을 사용합니다.
-
-        return command;
+```groovy
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
     }
-
-```
-
-```
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+}
     
-    dependencies {
-	        implementation 'com.github.moimp.clocks:clocks:1.0.0'
-	}
+dependencies {
+    implementation 'com.trevari.commons:clock:1.0.0'
+    testImplementation 'com.trevari.commons:clock-frozen:1.0.0'    
+}
 ```
 
