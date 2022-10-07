@@ -11,7 +11,8 @@
 <br/>
 
 **How To Use [clock-frozen] In TestCode**
-```
+
+```java
 [EX]
     @BeforeEach 
     void setUp() {
@@ -28,7 +29,7 @@
 
 <br/>
 
-**How To Use [clock] In Code**
+**TestCode**
 ```java
     @Test
     @DisplayName("When clock is frozen, Clock use FrozenClock")
@@ -51,6 +52,8 @@
         }
 ```
 
+
+## Add the dependency
 ```groovy
 allprojects {
     repositories {
@@ -64,4 +67,3 @@ dependencies {
     testImplementation 'com.trevari.commons:clock-frozen:1.0.0'    
 }
 ```
-
