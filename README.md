@@ -63,7 +63,7 @@ allprojects {
 }
     
 dependencies {
-    implementation 'com.trevari.commons:clock:1.0.0'
-    testImplementation 'com.trevari.commons:clock-frozen:1.0.0'    
+    implementation 'com.github.moimp.clocks:clocks:1.0.0'
+    implementation 'com.github.moimp.clocks:clocks-frozen:1.0.0'    
 }
 ```
